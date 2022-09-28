@@ -12,4 +12,26 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
+    devServer: {
+        static: './dist',
+        watchFiles: ['src/*'],
+        port: 8081,
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'App',
+            template: './src/index.html',
+            inject: 'head',
+        })
+    ],
+    watch: true,
+    module: {
+        rules: [{
+            test: /\.css$/i,
+            use: [
+                'style-loader',
+                'css-loader',
+            ],
+        }],
+    },
 };
