@@ -60,8 +60,8 @@ const buildDetails = data => {
             <canvas id="myChart"></canvas>
         </article>
         <footer class="weight-height-container">
-            <h3 class="pokemon-stats">PESO: ${weight}</h3>
-            <h3 class="pokemon-stats">ALTURA: ${height}</h3>
+            <h5 class="pokemon-stats">PESO: ${weight/10} KG</h5>
+            <h5 class="pokemon-stats">ALTURA: ${height/10} M</h5>
         </footer>
     </section>
     `;
@@ -117,7 +117,7 @@ const createChart = (
         data: dataChart,
         options: {
         color: '#fff',
-        maintainAspectRatio: false,
+        maintainAspectRatio: false, //Para ajustarlo dentro del modal
         },
     };
     const myChart = new Chart(document.getElementById('myChart'), configChart);

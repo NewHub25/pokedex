@@ -37,10 +37,15 @@ li{
     align-items: center;
     width: 160px;
     border-radius: 15px;
+    aspect-ratio: 1/1;
 }
 li:hover{
     filter: brightness(.8);
 }
+.user_buttons{
+    width: 95vw;
+}
+/* Aquí comienza los estilos del modal */
 .user_modal-content{
     position: fixed;
     background: hsla(0, 0, 0, .5);
