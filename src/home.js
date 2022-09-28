@@ -13,5 +13,5 @@ setInterval(() => {
 }, 1000);
 
 document.querySelector('h1').addEventListener('click', () => {
-    openModal('cloyster');
+    openModal('pikachu');
 });

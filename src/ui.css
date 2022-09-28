@@ -77,7 +77,6 @@ li:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-grow: 1;
     box-shadow: var(--modal-shadow);
 }
 #close-button {
@@ -107,17 +106,13 @@ nav#pokemon-types div{
 nav.pokemon-name{
     text-transform: capitalize;
     font-size: 2em;
-    flex-grow: 0;
     text-align: center;
     color: #fff;
 }
-.chart-container{
-    flex-grow: 54;
-}
 .weight-height-container {
-    flex-grow: 0;
     display: flex;
     justify-content: space-around;
+    color: #fff;
 }
 .normal-type {
 background-color: #a8a878;

@@ -113,12 +113,13 @@ const createChart = (
       ],
     };
     const configChart = {
-      type: 'doughnut',
-      data: dataChart,
-      options: {
+        type: 'doughnut',
+        data: dataChart,
+        options: {
         color: '#fff',
-      },
+        maintainAspectRatio: false,
+        },
     };
     const myChart = new Chart(document.getElementById('myChart'), configChart);
-  };
+};
   
