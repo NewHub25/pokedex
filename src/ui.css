@@ -5,3 +5,192 @@ font-family: 'DM Serif Text', serif; --> tiene italic
 font-family: 'Old Standard TT', serif; --> tiene italic
 font-family: 'Playball', cursive;
 */
+*, ::before, ::after{
+    font-family: 'Old Standard TT', 'DM Serif Text', 'Times New Roman', Times, serif;
+}
+:root {
+    --user-shadow-header: inset -3px -2px 5px 0px hsl(355, 90%, 35%),
+    3px 3px 10px 0 rgba(51, 51, 51, 0.607);
+    --modal-shadow: inset -2px -1px 4px 0px hsl(57, 100%, 9%);
+}
+.user-header{
+    border-radius: 0 0 20px 20px;
+    box-shadow: var(--user-shadow-header);
+}
+button{
+    text-transform: inherit;
+    box-shadow: var(--user-shadow-header);
+}
+button:active{
+    transform: translateY(3px);
+}
+ul#pokelist{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+    border-radius: 15px;
+}
+li:hover{
+    filter: brightness(.8);
+}
+.user_modal-content{
+    position: fixed;
+    background: hsla(0, 0, 0, .5);
+    border-radius: 15px;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .7s ease;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user_modal-content.active{
+    opacity: 1;
+    visibility: visible;
+}
+.user_modal{
+    background: #333;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px hsl(114, 90%, 55%);
+    font-size: 15px;
+    font-weight: bold;
+    width: 350px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+.user_modal-header{
+    border-radius: 15px 20px 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    box-shadow: var(--modal-shadow);
+}
+#close-button {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    border: none;
+    line-height: 0;
+    font-size: 30px;
+    padding: 3px;
+}
+.image-detail{
+    width: 50%;
+    object-fit: cover;
+}
+nav#pokemon-types{
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-around;
+}
+nav#pokemon-types div{
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: var(--modal-shadow);
+    text-align: center;
+}
+nav.pokemon-name{
+    text-transform: capitalize;
+    font-size: 2em;
+    flex-grow: 0;
+    text-align: center;
+    color: #fff;
+}
+.chart-container{
+    flex-grow: 54;
+}
+.weight-height-container {
+    flex-grow: 0;
+    display: flex;
+    justify-content: space-around;
+}
+.normal-type {
+background-color: #a8a878;
+}
+
+.fighting-type {
+background-color: #c03028;
+}
+
+.flying-type {
+background-color: #a890f0;
+}
+
+.poison-type {
+background-color: #a040a0;
+}
+
+.ground-type {
+background-color: #e0c068;
+}
+
+.rock-type {
+background-color: #b8a038;
+}
+
+.bug-type {
+background-color: #a8b820;
+}
+
+.ghost-type {
+background-color: #705898;
+}
+
+.steel-type {
+background-color: #b8b8d0;
+}
+
+.fire-type {
+background-color: #f08030;
+}
+
+.water-type {
+background-color: #6890f0;
+}
+
+.grass-type {
+background-color: #78c850;
+}
+
+.electric-type {
+background-color: #f8d030;
+}
+
+.psychic-type {
+background-color: #f85888;
+}
+
+.ice-type {
+background-color: #98d8d8;
+}
+
+.dragon-type {
+background-color: #7038f8;
+}
+
+.dark-type {
+background-color: #705848;
+}
+
+.fairy-type {
+background-color: #ee99ac;
+}
+
+.default-type {
+background-color: #0000;
+}

@@ -7,7 +7,7 @@
     <title>POKEDEX</title>
 </head>
 <body>
-    <header class="bg-danger pt-3 d-flex flex-column justify-content-center align-items-center user-header">
+    <header class="text-white bg-danger pt-3 d-flex flex-column justify-content-center align-items-center user-header">
         <nav data-date="current-date" class="text-capitalize"></nav>
         <nav>
             <h1 class="display-6 fw-bold">POKEDEX</h1>
@@ -23,6 +23,25 @@
     </section>
     <footer class="user_modal-content">
         <article class="user_modal">
+
+<!-- Diseño -->
+<header class="user_modal-header setType">
+    <button id="close-button" class="btn btn-danger"><ion-icon name="close-circle"></ion-icon></button>
+    <img src="" alt="image" class="image-detail">
+</header>
+<section class="user_modal-body">
+    <nav id="pokemon-types"></nav>
+    <nav class="pokemon-name">name</nav>
+    <article class="chart-container">
+        <canvas id="myChart"></canvas>
+    </article>
+    <footer class="weight-height-container">
+        <h3 class="pokemon-stats">PESO</h3>
+        <h3 class="pokemon-stats">ALTURA</h3>
+    </footer>
+</section>
+<!-- Diseño -->
+
         </article>
     </footer>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
