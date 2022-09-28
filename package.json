@@ -1,0 +1,28 @@
+{
+  "name": "pokedex-javascript-asincrono",
+  "version": "1.0.0",
+  "description": "Proyecto final para Crehana",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Javascript",
+    "API",
+    "Crehana",
+    "asincrono",
+    "pokemon"
+  ],
+  "author": "Terry Ildefonso",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^3.9.1",
+    "moment": "^2.29.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0"
+  }
+}
