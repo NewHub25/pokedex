@@ -25,7 +25,7 @@ export const setType = type => {
     }
   };
   
-  export const loader = () => {
+  export const loaderAllLi = () => {
     const pokeAvatars = document.querySelectorAll('#pokelist > li');
     pokeAvatars.forEach(avatar => {
         avatar.classList.replace('fadeIn', 'fadeOut');

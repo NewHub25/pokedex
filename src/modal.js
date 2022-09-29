@@ -1,5 +1,5 @@
 import { setType } from './shared';
-import Chart from 'chart.js/auto'
+import Chart from 'chart.js/auto';
 
 const modalElement = document.querySelector('.user_modal-content > article.user_modal');
 const modalContent = document.querySelector('.user_modal-content');
@@ -16,11 +16,25 @@ const abilities = [
 function closeModal () {
     console.log('Modal cerrado');
     modalContent.classList.remove('active');
+    toggleBlur();
 }
+
+function toggleBlur() {
+    document.querySelectorAll('body > *:not(footer)').forEach(el => {
+        el.classList.toggle('blur');
+    });
+}
+
+modalContent.addEventListener('click', event => {
+    if(event.currentTarget === event.target) closeModal();
+});
+
+export const imgDefault = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/132.png';
 
 export const openModal = async pokemonName => {
     modalElement.innerHTML = '';
     modalContent.classList.add('active');
+    toggleBlur();
     await fetchData(pokemonName)
         .then(data => {
             console.log(data);
@@ -51,13 +65,13 @@ const buildDetails = data => {
     modalElement.innerHTML += `
     <header class="user_modal-header ${setType(pokemonType)}">
         <button id="close-button" class="btn btn-danger"><ion-icon name="close-circle"></ion-icon></button>
-        <img src="${front_default}" alt="${name}" class="image-detail">
+        <img src="${front_default || imgDefault}" alt="${name}" class="image-detail">
     </header>
     <section class="user_modal-body">
         <nav id="pokemon-types"></nav>
         <nav class="pokemon-name">${name}</nav>
         <article class="chart-container">
-            <canvas id="myChart"></canvas>
+            <canvas id="myChart" height="270" width="300"></canvas>
         </article>
         <footer class="weight-height-container">
             <h5 class="pokemon-stats">PESO: ${weight/10} KG</h5>

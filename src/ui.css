@@ -13,6 +13,12 @@ font-family: 'Playball', cursive;
     3px 3px 10px 0 rgba(51, 51, 51, 0.607);
     --modal-shadow: inset -2px -1px 4px 0px hsl(57, 100%, 9%);
 }
+body > *:not(footer){
+    transition: filter .7s;
+}
+body > *:not(footer).blur{
+    filter: blur(2px);
+}
 .user-header{
     border-radius: 0 0 20px 20px;
     box-shadow: var(--user-shadow-header);
@@ -23,6 +29,9 @@ button{
 }
 button:active{
     transform: translateY(3px);
+}
+.user_buttons{
+    width: 95vw;
 }
 ul#pokelist{
     list-style: none;
@@ -38,12 +47,35 @@ li{
     width: 160px;
     border-radius: 15px;
     aspect-ratio: 1/1;
+    cursor: pointer;
 }
 li:hover{
     filter: brightness(.8);
 }
-.user_buttons{
-    width: 95vw;
+li h3{
+    text-align: center;
+}
+.fadeIn{
+    animation: fadeIn 1s ease-in-out forwards;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.fadeOut{
+    animation: fadeOut 2s ease-in-out forwards;
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 /* Aquí comienza los estilos del modal */
 .user_modal-content{
@@ -72,7 +104,7 @@ li:hover{
     font-size: 15px;
     font-weight: bold;
     width: 350px;
-    height: 90vh;
+    height: 85vh;
     display: flex;
     flex-direction: column;
 }
@@ -98,12 +130,13 @@ li:hover{
     object-fit: cover;
 }
 nav#pokemon-types{
-    margin-top: 7px;
     display: flex;
     justify-content: space-around;
+    gap: 20px;
+    padding: 10px;
 }
 nav#pokemon-types div{
-    width: 40%;
+    flex-grow: 1;
     border-radius: 10px;
     box-shadow: var(--modal-shadow);
     text-align: center;
