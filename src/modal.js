@@ -25,9 +25,9 @@ function toggleBlur() {
     });
 }
 
-modalContent.addEventListener('click', event => {
-    if(event.currentTarget === event.target) closeModal();
-});
+// modalContent.addEventListener('click', event => {
+//     if(event.currentTarget === event.target) closeModal();
+// });
 
 export const imgDefault = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/132.png';
 
@@ -35,6 +35,9 @@ export const openModal = async pokemonName => {
     modalElement.innerHTML = '';
     modalContent.classList.add('active');
     toggleBlur();
+    modalContent.onclick = e => {
+        if(e.target.tagName == 'FOOTER') closeModal();
+    }
     await fetchData(pokemonName)
         .then(data => {
             console.log(data);

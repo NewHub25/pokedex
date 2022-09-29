@@ -1,0 +1,19 @@
+body{
+    transition: background 1s;
+}
+body.day{
+    background: #333;
+}
+.user_day ion-icon{
+    display: none;
+    cursor: pointer;
+}
+.user_day ion-icon.day{
+    display: block;
+    animation: day .7s alternate infinite;
+}
+@keyframes day {
+    to{
+        transform: rotate(-30deg);
+    }
+}

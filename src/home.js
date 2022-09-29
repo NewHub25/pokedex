@@ -31,7 +31,7 @@ prevButton.addEventListener('click', event => {
     }
 });
 
-function printPokemons() {
+export function printPokemons() {
     nextButton.disabled = true;
     prevButton.disabled = true;
 

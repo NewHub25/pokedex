@@ -50,7 +50,7 @@ ul#pokelist{
     flex-wrap: wrap;
     gap: 10px;
 }
-li{
+ul#pokelist li{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,10 +59,10 @@ li{
     aspect-ratio: 1/1;
     cursor: pointer;
 }
-li:hover{
+ul#pokelist li:hover{
     filter: brightness(.8);
 }
-li h3{
+ul#pokelist li h3{
     text-align: center;
 }
 .fadeIn{
@@ -102,6 +102,7 @@ li h3{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 20;
 }
 .user_modal-content.active{
     opacity: 1;
@@ -117,6 +118,8 @@ li h3{
     height: 85vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    z-index: 30;
 }
 .user_modal-header{
     border-radius: 15px 20px 20px;
