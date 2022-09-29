@@ -1,1 +1,3 @@
-import './ui.css'
+import './welcome.css';
+import './ui.css';
+import './colorTypes.css';
