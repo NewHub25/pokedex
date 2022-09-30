@@ -7,14 +7,17 @@
     width: 0px;
     height: 30px;
     border-radius: 10px;
-    border: none;
+    border: 2px double red;
     outline: none;
     font-size: 15px;
     visibility: hidden;
     transition: width 1s;
     position: relative;
 }
-.user_input.show{
+.user_input.mobile{
+    transform: translateY(50px);
+}
+.user_input.show, .user_input.mobile.show{
     width: 150px;
     visibility: visible;
 }

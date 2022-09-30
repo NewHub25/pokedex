@@ -14,3 +14,11 @@ function toggleDay() {
 }
 document.querySelector('.user_day')
     .addEventListener('click', toggleDay);
+
+//Mover el input del buscador si el dispositivo es Android
+function isAndroid() {
+    if(navigator.userAgent.match(/android/i)) {
+        document.querySelector('.user_input').classList.add('mobile');
+    }
+}
+isAndroid();
